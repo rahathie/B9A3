@@ -7,18 +7,44 @@
 <!-- tailwind and daisy ui cdn -->
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+<!-- google font manrope -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;800&display=swap" rel="stylesheet">
+
+<!-- tailwind custom classes -->
+<script>
+    tailwind.config.js
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'hockeyscolor-primary': '#FF4240',
+
+          }
+        }
+      }
+    }
+  </script>
+<!-- custom styles -->
+
+<style>
+    .font-manrope{
+        font-family: 'Manrope', sans-serif;
+    }
+</style>
 </head>
-<body>
+<body class="font-manrope">
     <!-- first section -->
-    <header>
-        <div>
+    <header class="my-24">
+        <div class="container mx-auto lg:px-24 px-8">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                   <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 text-base shadow bg-base-100 rounded-box w-52">
                       <li><a>Home</a></li>
                       <li><a>About</a></li>
                       <li><a>Pages</a></li>
@@ -26,10 +52,10 @@
                       <li><a>Contact</a></li>
                     </ul>
                   </div>
-                  <a class="btn btn-ghost text-xl">Hockey's</a>
+                  <a class="btn btn-ghost text-3xl">Hockey's</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
+                  <ul class="menu text-base menu-horizontal px-1">
                     <li><a>Home</a></li>
                       <li><a>About</a></li>
                       <li><a>Pages</a></li>
@@ -40,20 +66,110 @@
                 <div class="navbar-end">
                   <div class="flex items-center gap-4 justify-between px-6 py-3 rounded-full">
                     <img src="Images/Frame.png" alt="">
-                    <a class="btn btn-error">Get Ticket</a>
-                  
-                  
-
+                    <a class="btn  bg-hockeyscolor-primary text-white">Get Ticket</a>
                   </div>
                 </div>
               </div>
         </div>
+      <!-- slider and carosel -->
+      <div class="carousel w-full lg:h-[550px]">
+        <!-- slide 1 -->
+        <div id="slide1" class="carousel-item relative w-full flex items-center justify-center">
+          <img src="Images/1.png" class="w-400px" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide4" class="btn btn-circle">❮</a> 
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <!-- slide 2 -->
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="Images/hockey2.jpeg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle">❮</a> 
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <!-- slide 3 -->
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="Images/hockey3.jpeg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a> 
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <!-- slide 4 -->
+        <div id="slide4" class="carousel-item relative w-full">
+          <img src="Images/hockey4.jpeg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle">❮</a> 
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
     </header>
-    <main>
+    <section class="my-1">
+        <!-- professional club -->
+        
+        <h3 class="text-5xl font-semibold text-center my-10">Professional Hockeys Club</h3>
+        <p>
+            Hockey is an outdoor game played between two teams of 11 players who use long curved sticks to hit a small ball and try to score goals.</p>
+            <div class="flex items-center justify-between my-10">
+                <div class="radial-progress" style="--value:70;" role="progressbar">87%</div>
+             <div class="radial-progress" style="--value:70;" role="progressbar">95%</div>
+            <div class="radial-progress" style="--value:70;" role="progressbar">90%</div>
+            <div class="radial-progress" style="--value:80;" role="progressbar">80%</div>
+            
+            </div>
+            <h1>Prayer Facility</h1>
+            <p>
+                A graphic aid that shows information visually so that the reader can better understand and remember the ideas</p>
+            
+        <div>
+
+        </div>
+    
+    
+    </section>
+    <main class="container mx-auto lg:px-24 px-8">
 
     </main>
-    <footer>
+    <footer class="footer p-10 bg-base-200 text-base-content lg:px-24 px-8">
+      <aside>
+        <h3 class="pt-10">Get in Touch</h3>
+        <p>Explain why someone should contact your business. Describe how your business can help solve the visitors' problems. Include an email and phone number so visitors can get in touch with you on their first attempt</p>
+        <div class="flex justify-around">
+          <p>hockeys@support.com</p>
+          <iframe src="Images/Frame (1).png" frameborder="0"></iframe>
+        </div>
+          <div class="h-8">
+            <p>(+62) 123-321-54</p>
+          <iframe src="Images/Frame (2).png" frameborder="0"></iframe>
+          </div>
+          
+        
+        
 
+      </aside> 
+      <nav>
+        <header class="footer-title">Company</header> 
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Leadership</a>
+        <a class="link link-hover">Carrers</a>
+        <a class="link link-hover">legal Notice</a>
+      </nav> 
+      <nav>
+        <header class="footer-title">Support</header> 
+        <a class="link link-hover">Help Center</a>
+        <a class="link link-hover">Faq</a>
+        <a class="link link-hover">Ticket Support</a>
+        <a class="link link-hover">Contact Us</a>
+      </nav> 
+      <nav>
+        <header class="footer-title">Services</header> 
+        <a class="link link-hover">Academy</a>
+        <a class="link link-hover">Group lesson</a>
+        <a class="link link-hover">Private Lesson</a>
+      </nav>
     </footer>
 </body>
 </html>
